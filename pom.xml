@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>14.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>eu.biii</groupId>
+	<artifactId>BIII_website</artifactId>
+	<version>0.1.1</version>
+
+	<name>Bio Image Information Index
+
+</name>
+	<url>https://github.com/vcaldas/biii_website</url>
+	<inceptionYear>2017</inceptionYear>
+	
+	<organization>
+		<name>Victor Caldas</name>
+		<url>http://eubias.org/NEUBIAS/</url>
+	</organization>
+	
+	<licenses>
+		<license>
+			<name>GNU General Public License v3+</name>
+			<url>https://www.gnu.org/licenses/gpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>vcaldas</id>
+			<name>Victor Caldas</name>
+			<url>https://imagej.net/User:Vcaldas</url>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>ImageJ Forum</name>
+			<archive>http://forum.imagej.net/</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/vcaldas/biii_website</connection>
+		<developerConnection>scm:git:git@github.com:vcaldas/biii_website</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/vcaldas/biii_website</url>
+	</scm>
+	
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>http://github.com/vcaldas/biii_website/issues</url>
+	</issueManagement>
+	
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<BIII_website>Bise</BIII_website>
+		<license.licenseName>gpl_v3</license.licenseName>
+		<license.copyrightOwners>Victor Caldas.</license.copyrightOwners>
+		<license.projectName>ImageJ Plugins collection.</license.projectName>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+	
+	
+	
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>${project.build.sourceDirectory}</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>${basedir}/src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>${project.build.testSourceDirectory}</directory>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+					
+					
+				</executions>
+				<configuration>
+					<mainClass></mainClass>
+				</configuration>
+			</plugin>
+			
+			
+			
+			<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10.3</version><!--$NO-MVN-MAN-VER$-->
+			<executions>
+				<execution>
+					<id>attach-javadocs</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+			<!-- java 1.8-->
+			<configuration>
+				<additionalparam>-Xdoclint:none</additionalparam>
+			</configuration>
+		</plugin>
+		</plugins>
+</build>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
+		</dependency>
+		
+	</dependencies>
+	<description>BISE Bio Imaging Search Engine: a Bio Image Information Index
+
+</description>
+</project>
