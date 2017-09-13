@@ -8,7 +8,9 @@ The easier way to install is to follow the instructions at [the Fiji Tutorial](h
 using the following parameters:
 
 Name: Neubias
-URL: http://imageJ.net/Neubias
+
+URL: http://sites.imagej.net/Neubias/
+
 
 Enjoy!
 
