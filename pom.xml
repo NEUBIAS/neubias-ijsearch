@@ -8,13 +8,13 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>14.0.0</version>
+		<version>17.0.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>eu.biii</groupId>
 	<artifactId>BIII_website</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2-SNAPSHOT</version>
 
 	<name>Bio Image Information Index
 
@@ -53,7 +53,7 @@
 	
 	<contributors>
 		<contributor>
-			<name>None</name>
+			<name>Jan Eglinger</name>
 		</contributor>
 	</contributors>
 
