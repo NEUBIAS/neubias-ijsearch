@@ -16,10 +16,9 @@
 	<artifactId>BIII_website</artifactId>
 	<version>0.1.2-SNAPSHOT</version>
 
-	<name>Bio Image Information Index
-
-</name>
-	<url>https://github.com/vcaldas/biii_website</url>
+	<name>Bio Image Information Index </name>
+	
+	<url>https://github.com/NeuBIAS/neubias-ijsearch</url>
 	<inceptionYear>2017</inceptionYear>
 	
 	<organization>
@@ -65,15 +64,15 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/vcaldas/biii_website</connection>
-		<developerConnection>scm:git:git@github.com:vcaldas/biii_website</developerConnection>
+		<connection>scm:git:git://github.com/NeuBIAS/neubias-ijsearch</connection>
+		<developerConnection>scm:git:git@github.com:NeuBIAS/neubias-ijsearch</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/vcaldas/biii_website</url>
+		<url>https://github.com/NeuBIAS/neubias-ijsearch</url>
 	</scm>
 	
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>http://github.com/vcaldas/biii_website/issues</url>
+		<url>https://github.com/NeuBIAS/neubias-ijsearch/issues</url>
 	</issueManagement>
 	
 	<ciManagement>
