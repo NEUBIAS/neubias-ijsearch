@@ -1,1 +1,21 @@
-target
+# Binaries
+target/
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+
+# External tool builders
+.externalToolBuilders/
+
