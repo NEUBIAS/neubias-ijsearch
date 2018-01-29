@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>14.0.0</version>
+		<version>19.1.1</version>
 		<relativePath />
 	</parent>
 
@@ -16,9 +16,8 @@
 	<artifactId>BIII_website</artifactId>
 	<version>0.1.1</version>
 
-	<name>Bio Image Information Index
-
-</name>
+	<name>Bio Image Information Index</name>
+	
 	<url>https://github.com/vcaldas/biii_website</url>
 	<inceptionYear>2017</inceptionYear>
 	
@@ -156,11 +155,28 @@
 
 
 	<dependencies>
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>imagej</artifactId>
-		</dependency>
 		
+	<!-- User-facing commands -->
+	<dependency>
+    		<groupId>net.imagej</groupId>
+    		<artifactId>imagej-plugins-commands</artifactId>
+	</dependency>
+ 
+	<!-- Run graphically with the classic (ImageJ 1.x) user interface -->
+	<dependency>
+    		<groupId>net.imagej</groupId>
+    		<artifactId>imagej-legacy</artifactId>
+	</dependency>
+	
+	<!-- HTML parser for BISEsearcher -->
+	<dependency>
+    		  <groupId>org.jsoup</groupId>
+     	  <artifactId>jsoup</artifactId>
+      	  <version>1.7.2</version>
+	</dependency>	
+	
+
+	
 	</dependencies>
 	<description>BISE Bio Imaging Search Engine: a Bio Image Information Index
 
