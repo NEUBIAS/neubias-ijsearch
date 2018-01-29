@@ -1,1 +1,1 @@
-{"class":"classes.eu.neubias.biii.Neubias_website","values":{"headless":true,"menuPath":"Help > NEUBIAS > NEUBIAS","type":"org.scijava.command.Command"}}{"class":"classes.eu.neubias.biii.BISESearcher","values":{"enabled":false,"type":"org.scijava.search.Searcher"}}
+{"class":"classes.eu.neubias.biii.BISESearcher","values":{"enabled":false,"type":"org.scijava.search.Searcher"}}
