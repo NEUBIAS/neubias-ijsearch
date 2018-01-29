@@ -97,7 +97,7 @@ public class BISESearcher implements Searcher {
 		if (links.first().attr("href") != null) {
 			String href = link.attr("href");
 			currentHeading = link.text();
-			currentLink = "http://biii.eu/" + href;
+			currentLink = "http://biii.eu" + href;
 			
 		}
 		
