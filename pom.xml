@@ -85,16 +85,14 @@
 	</properties>
 
 	<dependencies>
-		<!-- User-facing commands -->
 		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>imagej-plugins-commands</artifactId>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
 		</dependency>
 
-		<!-- Run graphically with the classic (ImageJ 1.x) user interface -->
 		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>imagej-legacy</artifactId>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-search</artifactId>
 		</dependency>
 
 		<!-- HTML parser for BISEsearcher -->
