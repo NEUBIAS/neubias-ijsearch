@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>19.1.1</version>
+		<version>23.2.0</version>
 	</parent>
 
 	<groupId>eu.biii</groupId>
-	<artifactId>BIII_website</artifactId>
+	<artifactId>neubias-ijsearch</artifactId>
 	<version>0.1.2-SNAPSHOT</version>
 
-
 	<name>Bio Image Information Index </name>
-		<url>https://github.com/NeuBIAS/neubias-ijsearch</url>
+	<description>ImageJ search plugin for BISE Bio Imaging Search Engine: a Bio Image Information Index</description>
+	<url>https://github.com/NeuBIAS/neubias-ijsearch</url>
 	<inceptionYear>2017</inceptionYear>
-	
 	<organization>
-		<name>Victor Caldas</name>
+		<name>NEUBIAS</name>
 		<url>http://eubias.org/NEUBIAS/</url>
 	</organization>
-	
 	<licenses>
 		<license>
 			<name>GNU General Public License v3+</name>
@@ -39,6 +34,7 @@
 			<name>Victor Caldas</name>
 			<url>https://imagej.net/User:Vcaldas</url>
 			<roles>
+				<role>founder</role>
 				<role>lead</role>
 				<role>developer</role>
 				<role>debugger</role>
@@ -48,10 +44,14 @@
 			</roles>
 		</developer>
 	</developers>
-	
 	<contributors>
 		<contributor>
 			<name>Jan Eglinger</name>
+			<properties><id>imagejan</id></properties>
+		</contributor>
+		<contributor>
+			<name>Robert Haase</name>
+			<properties><id>haesleinhuepf</id></properties>
 		</contributor>
 	</contributors>
 
@@ -68,116 +68,45 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/NeuBIAS/neubias-ijsearch</url>
 	</scm>
-	
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>https://github.com/NeuBIAS/neubias-ijsearch/issues</url>
 	</issueManagement>
-	
 	<ciManagement>
-		<system>None</system>
+		<system>Travis CI</system>
+		<url>https://travis-ci.com/NeuBIAS/neubias-ijsearch</url>
 	</ciManagement>
 
 	<properties>
-		<BIII_website>Bise</BIII_website>
 		<license.licenseName>gpl_v3</license.licenseName>
-		<license.copyrightOwners>Victor Caldas.</license.copyrightOwners>
-		<license.projectName>ImageJ Plugins collection.</license.projectName>
+		<license.copyrightOwners>Victor Caldas</license.copyrightOwners>
+		
+		<jsoup.version>1.7.2</jsoup.version>
 	</properties>
-	
+
+	<dependencies>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-search</artifactId>
+		</dependency>
+
+		<!-- HTML parser for BISEsearcher -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
+		</dependency>
+	</dependencies>
+
 	<repositories>
 		<repository>
 			<id>imagej.public</id>
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
 	</repositories>
-	
-	
-	
-	
-	<build>
-		<resources>
-			<resource>
-				<directory>${basedir}/src/main/resources</directory>
-			</resource>
-			<resource>
-				<directory>${project.build.sourceDirectory}</directory>
-			</resource>
-		</resources>
-		<testResources>
-			<testResource>
-				<directory>${basedir}/src/test/resources</directory>
-			</testResource>
-			<testResource>
-				<directory>${project.build.testSourceDirectory}</directory>
-			</testResource>
-		</testResources>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-					
-					
-				</executions>
-				<configuration>
-					<mainClass></mainClass>
-				</configuration>
-			</plugin>
-			
-			
-			
-			<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-javadoc-plugin</artifactId>
-			<version>2.10.3</version><!--$NO-MVN-MAN-VER$-->
-			<executions>
-				<execution>
-					<id>attach-javadocs</id>
-					<goals>
-						<goal>jar</goal>
-					</goals>
-				</execution>
-			</executions>
-			<!-- java 1.8-->
-			<configuration>
-				<additionalparam>-Xdoclint:none</additionalparam>
-			</configuration>
-		</plugin>
-		</plugins>
-</build>
-
-
-	<dependencies>
-		
-	<!-- User-facing commands -->
-	<dependency>
-    		<groupId>net.imagej</groupId>
-    		<artifactId>imagej-plugins-commands</artifactId>
-	</dependency>
- 
-	<!-- Run graphically with the classic (ImageJ 1.x) user interface -->
-	<dependency>
-    		<groupId>net.imagej</groupId>
-    		<artifactId>imagej-legacy</artifactId>
-	</dependency>
-	
-	<!-- HTML parser for BISEsearcher -->
-	<dependency>
-    		  <groupId>org.jsoup</groupId>
-     	  <artifactId>jsoup</artifactId>
-      	  <version>1.7.2</version>
-	</dependency>	
-	
-
-	
-	</dependencies>
-	<description>BISE Bio Imaging Search Engine: a Bio Image Information Index
-
-</description>
 </project>

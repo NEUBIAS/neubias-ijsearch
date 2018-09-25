@@ -34,17 +34,16 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.scijava.log.LogService;
 import org.scijava.plugin.Parameter;
 import org.scijava.plugin.Plugin;
 import org.scijava.search.SearchResult;
 import org.scijava.search.Searcher;
 import org.scijava.search.web.WebSearchResult;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 /**
  * A searcher for the <a href="http://biii.eu/search">Bio-Imaging Search
